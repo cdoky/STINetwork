@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "Dribbble.h"
+#import "Samurai_Predefine.h"
 
 @interface ViewController ()
 
@@ -17,6 +19,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    LIST_SHOTS_API * api = [LIST_SHOTS_API new];
+    
+    @weakify( self );
+    
+    api.req.page = 1;
+    api.req.per_page = 18;
+    api.req.list = @"popular";
+    
+    api.whenUpdated = ^( LIST_SHOTS_RESPONSE * resp, id error ) {
+        
+        @strongify( self );
+        
+        if ( resp )
+        {
+            //
+        }
+        else
+        {
+        }
+    };
+    
+    [api send];
 }
 
 - (void)didReceiveMemoryWarning {
