@@ -5,16 +5,14 @@
 3.请求的数据，自动反序列化成相对应的mode实例</br>
 
 使用方法如下
-<code>
+
     LIST_SHOTS_API * api = [LIST_SHOTS_API new];
-    //@weakify( self );
+    
     api.req.page = 1;
     api.req.per_page = 18;
     api.req.list = @"popular";
     
     api.whenUpdated = ^( LIST_SHOTS_RESPONSE * resp, id error ) {
-        
-        //@strongify( self );
         
         if ( resp )
         {
@@ -29,7 +27,6 @@
     };
     
     [api send];
-</code>
 
 由于这两个框架本身比较重，所以从中分离出其中的网络框架出来单独使用，有需要的可以支持一下。
 
