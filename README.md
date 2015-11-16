@@ -4,6 +4,30 @@
 2.自动生成api接口调用代码，你要做的只是填充请求数据</br>
 3.请求的数据，自动反序列化成相对应的mode实例</br>
 
+使用方法如下
+
+    LIST_SHOTS_API * api = [LIST_SHOTS_API new];
+    
+    api.req.page = 1;
+    api.req.per_page = 18;
+    api.req.list = @"popular";
+    
+    api.whenUpdated = ^( LIST_SHOTS_RESPONSE * resp, id error ) {
+        
+        if ( resp )
+        {
+            //request success
+            NSArray<SHOT> *shots = resp.data;
+            //todo something
+        }
+        else
+        {
+            //request faild
+        }
+    };
+    
+    [api send];
+
 由于这两个框架本身比较重，所以从中分离出其中的网络框架出来单独使用，有需要的可以支持一下。
 
 以后应该没事的时候还会把这两个框架里面比较好用的扩展分离出来
