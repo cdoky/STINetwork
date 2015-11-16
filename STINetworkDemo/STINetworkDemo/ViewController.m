@@ -22,22 +22,21 @@
     
     LIST_SHOTS_API * api = [LIST_SHOTS_API new];
     
-    @weakify( self );
-    
     api.req.page = 1;
     api.req.per_page = 18;
     api.req.list = @"popular";
     
     api.whenUpdated = ^( LIST_SHOTS_RESPONSE * resp, id error ) {
         
-        @strongify( self );
-        
         if ( resp )
         {
-            //
+            //request success
+            NSArray<SHOT> *shots = resp.data;
+            //todo something
         }
         else
         {
+            //request faild
         }
     };
     
