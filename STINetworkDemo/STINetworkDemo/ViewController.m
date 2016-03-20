@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "Dribbble.h"
-#import "Samurai_Predefine.h"
 
 @interface ViewController ()
 

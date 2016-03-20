@@ -31,7 +31,10 @@
 #import "Samurai_Singleton.h"
 //#import "Samurai_UnitTest.h"
 
-#import "_pragma_push.h"
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+#pragma clang diagnostic ignored "-Wunreachable-code"
 
 // ----------------------------------
 // Source code
@@ -43,65 +46,65 @@
 
 + (id)sharedInstance
 {
-	return nil;
+    return nil;
 }
 
 - (id)sharedInstance
 {
-	return nil;
+    return nil;
 }
 
 + (id)sharedInstanceOrNew
 {
-	id obj = [self sharedInstance];
-	
-	if ( nil == obj )
-	{
-		obj = [[self alloc] init];
-	}
-	
-	return obj;
+    id obj = [self sharedInstance];
+    
+    if ( nil == obj )
+    {
+        obj = [[self alloc] init];
+    }
+    
+    return obj;
 }
 
 - (id)sharedInstanceOrNew
 {
-	return [[self class] sharedInstanceOrNew];
+    return [[self class] sharedInstanceOrNew];
 }
 
 @end
-//
-//// ----------------------------------
-//// Unit test
-//// ----------------------------------
-//
-//#pragma mark -
-//
-//#if __SAMURAI_TESTING__
-//
-//@interface __SingletonTest : NSObject
-//@singleton( __SingletonTest )
-//@end
-//
-//@implementation __SingletonTest
-//@def_singleton( __SingletonTest )
-//@end
-//
-//TEST_CASE( Core, Singleton )
-//{
-//}
-//
-//DESCRIBE( singleton )
-//{
-//	__SingletonTest * a = [__SingletonTest sharedInstance];
-//	__SingletonTest * b = [__SingletonTest sharedInstance];
-//	
-//	EXPECTED( nil != a );
-//	EXPECTED( nil != b );
-//	EXPECTED( a == b );
-//}
-//
-//TEST_CASE_END
-//
-//#endif	// #if __SAMURAI_TESTING__
-//
-#import "_pragma_pop.h"
+
+// ----------------------------------
+// Unit test
+// ----------------------------------
+
+#pragma mark -
+
+#if __SAMURAI_TESTING__
+
+@interface __SingletonTest : NSObject
+@singleton( __SingletonTest )
+@end
+
+@implementation __SingletonTest
+@def_singleton( __SingletonTest )
+@end
+
+TEST_CASE( Core, Singleton )
+{
+}
+
+DESCRIBE( singleton )
+{
+    __SingletonTest * a = [__SingletonTest sharedInstance];
+    __SingletonTest * b = [__SingletonTest sharedInstance];
+    
+    EXPECTED( nil != a );
+    EXPECTED( nil != b );
+    EXPECTED( a == b );
+}
+
+TEST_CASE_END
+
+#endif	// #if __SAMURAI_TESTING__
+
+#pragma clang diagnostic pop

@@ -33,7 +33,6 @@
 #import "NSObject+AutoCoding.h"
 #import "AFNetworking.h"
 #import "Samurai_Singleton.h"
-#import "Samurai_Predefine.h"
 
 #pragma mark -
 
@@ -69,63 +68,63 @@
 
 - (instancetype)init
 {
-	self = [super init];
-	if (self) {
-		self.apis = [NSMutableDictionary dictionary];
-	}
-	return self;
+    self = [super init];
+    if (self) {
+        self.apis = [NSMutableDictionary dictionary];
+    }
+    return self;
 }
 
 - (void)add:(id)api
 {
-	NSString * clazz = NSStringFromClass([api class]);
-	NSMutableArray * apis = self.apis[clazz];
-	if ( !apis )
-	{
-		self.apis[clazz] = [NSMutableArray arrayWithObject:api];
-	}
-	else
-	{
-		[apis addObject:api];
-	}
+    NSString * clazz = NSStringFromClass([api class]);
+    NSMutableArray * apis = self.apis[clazz];
+    if ( !apis )
+    {
+        self.apis[clazz] = [NSMutableArray arrayWithObject:api];
+    }
+    else
+    {
+        [apis addObject:api];
+    }
 }
 
 - (void)cancel:(id)api
 {
-	[self removeAll:[api class]];
+    [self removeAll:[api class]];
 }
 
 - (void)remove:(id)api
 {
-	NSString * clazz = NSStringFromClass([api class]);
-	NSMutableArray * apis = self.apis[clazz];
-	if ( apis && apis.count )
-	{
-		[apis removeObject:api];
-	}
+    NSString * clazz = NSStringFromClass([api class]);
+    NSMutableArray * apis = self.apis[clazz];
+    if ( apis && apis.count )
+    {
+        [apis removeObject:api];
+    }
 }
 
 - (void)removeAll:(Class)clazz
 {
-	NSMutableArray * apis = self.apis[NSStringFromClass(clazz)];
-	if ( apis && apis.count )
-	{
-		[apis enumerateObjectsUsingBlock:^(STIHTTPApi * obj, NSUInteger idx, BOOL *stop) {
-	 		if ( !obj.manuallyCancel )
-			{
-				[obj cancel];
-			}
-		}];
-		[apis removeAllObjects];
-	}
+    NSMutableArray * apis = self.apis[NSStringFromClass(clazz)];
+    if ( apis && apis.count )
+    {
+        [apis enumerateObjectsUsingBlock:^(STIHTTPApi * obj, NSUInteger idx, BOOL *stop) {
+            if ( !obj.manuallyCancel )
+            {
+                [obj cancel];
+            }
+        }];
+        [apis removeAllObjects];
+    }
     TODO("@QFish: 增加定时清除长期不用的数组的策略");
-	//	[self.apis removeObjectForKey:clazz];
+    //	[self.apis removeObjectForKey:clazz];
 }
 
 - (void)send:(id)api
 {
-	[self cancel:api];
-	[self add:api];
+    [self cancel:api];
+    [self add:api];
 }
 
 @end
@@ -146,7 +145,7 @@ static STIHTTPSessionManager * kGlobalHTTPSessionManager = nil;
 
 + (void)cancel
 {
-	[[STIHTTPApiManager sharedInstance] removeAll:self];
+    [[STIHTTPApiManager sharedInstance] removeAll:self];
 }
 
 - (void)dealloc
@@ -166,7 +165,7 @@ static STIHTTPSessionManager * kGlobalHTTPSessionManager = nil;
 - (id)processedDataWithResponseObject:(id)responseObject task:(NSURLSessionDataTask *)task
 {
     // By default, just make the HTTPSessionManager process data
-	return responseObject;
+    return responseObject;
 }
 
 - (void)handleError:(NSError *)error responseObject:(id)responseObject task:(NSURLSessionDataTask *)task failureBlock:(void (^)(id, id))failureBlock
@@ -180,45 +179,45 @@ static STIHTTPSessionManager * kGlobalHTTPSessionManager = nil;
     if ( self.HTTPSessionManager.setup ) {
         self.HTTPSessionManager.setup(nil);
     }
-	
-	[[STIHTTPApiManager sharedInstance] send:self];
-
+    
+    [[STIHTTPApiManager sharedInstance] send:self];
+    
     self.task = [self.HTTPSessionManager method:self.req.method
-                           endpoint:self.req.endpoint
-                         parameters:self.req.parameters
-                            success:^(NSURLSessionDataTask *task, id responseObject)
-							{
-								// 请求成功，将自己从manager中移除
-								[[STIHTTPApiManager sharedInstance] remove:self];
-								// 请求成功，解析数据
-								id resp = [self.HTTPSessionManager processedDataWithResponseObject:responseObject task:task];
-								resp = [self processedDataWithResponseObject:resp task:task];
-                                self.resp = [self.req.responseClass ac_objectWithAny:resp];
-                                self.responseObject = responseObject;
-                                if ( self.whenUpdated ) {
-                                    self.whenUpdated( self.resp, nil );
-                                }
-                            }
-                            failure:^(NSURLSessionDataTask *task, id responseObject, NSError *error)
-							{
-								// 请求失败，将自己从manager中移除
-								[[STIHTTPApiManager sharedInstance] remove:self];
-								
-								// 请求被取消
-                                if ( NSURLErrorCancelled == error.code )
-                                {
-//									NSLog(@"Network cancelled:\n%@\n", task.currentRequest);
-									
-                                    if ( self.whenCanceled )
-                                    {
-                                        self.whenCanceled();
-                                    }
-                                }
-                                else
-                                {
-                                    [self.HTTPSessionManager handleError:error responseObject:responseObject task:task failureBlock:self.whenUpdated];
-                                }
-                            }];
+                                       endpoint:self.req.endpoint
+                                     parameters:self.req.parameters
+                                        success:^(NSURLSessionDataTask *task, id responseObject)
+                 {
+                     // 请求成功，将自己从manager中移除
+                     [[STIHTTPApiManager sharedInstance] remove:self];
+                     // 请求成功，解析数据
+                     id resp = [self.HTTPSessionManager processedDataWithResponseObject:responseObject task:task];
+                     resp = [self processedDataWithResponseObject:resp task:task];
+                     self.resp = [self.req.responseClass ac_objectWithAny:resp];
+                     self.responseObject = responseObject;
+                     if ( self.whenUpdated ) {
+                         self.whenUpdated( self.resp, nil );
+                     }
+                 }
+                                        failure:^(NSURLSessionDataTask *task, id responseObject, NSError *error)
+                 {
+                     // 请求失败，将自己从manager中移除
+                     [[STIHTTPApiManager sharedInstance] remove:self];
+                     
+                     // 请求被取消
+                     if ( NSURLErrorCancelled == error.code )
+                     {
+                         //									NSLog(@"Network cancelled:\n%@\n", task.currentRequest);
+                         
+                         if ( self.whenCanceled )
+                         {
+                             self.whenCanceled();
+                         }
+                     }
+                     else
+                     {
+                         [self.HTTPSessionManager handleError:error responseObject:responseObject task:task failureBlock:self.whenUpdated];
+                     }
+                 }];
 }
 
 - (void)cancel
@@ -279,21 +278,21 @@ static STIHTTPSessionManager * kGlobalHTTPSessionManager = nil;
 - (NSDictionary *)parameters
 {
     NSDictionary * parameters = [self dictionaryRepresentation];
-	return parameters.count ? parameters : nil;
+    return parameters.count ? parameters : nil;
 }
 
 - (NSString *)endpoint
 {
     NSAssert(_endpoint && _endpoint.length, @"Are you kiding ?! The URI endpoint for requset should not be empty");
-
+    
     if ( [_endpoint hasPrefix:@"/"] ) {
         _endpoint = [_endpoint substringFromIndex:1];
     }
     
     NSArray * partials = [_endpoint componentsSeparatedByString:@"/"];
-
+    
     NSArray * targets = [partials filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SELF beginswith[c] ':'"]];
-
+    
     __block NSMutableString * path = [_endpoint mutableCopy];
     
     [targets enumerateObjectsUsingBlock:^(NSString * str, __unused NSUInteger idx, __unused BOOL *stop) {

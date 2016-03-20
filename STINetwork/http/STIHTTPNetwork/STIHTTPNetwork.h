@@ -31,6 +31,17 @@
 #import <Foundation/Foundation.h>
 #import "STIHTTPSessionManager.h"
 
+#ifndef	TODO
+#define TODO( X )			_Pragma(macro_cstr(message("✖✖✖✖✖✖✖✖✖✖✖✖✖✖✖✖✖✖ TODO: " X)))
+#endif
+
+#define macro_cstr( A )										macro_cstr_( A )
+#define macro_cstr_( A )									#A
+
+#define macro_string( A )									macro_string_( A )
+#define macro_string_( A )									@(#A)
+
+
 @class STIHTTPResponseError;
 
 #pragma mark -
