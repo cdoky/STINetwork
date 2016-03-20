@@ -9,8 +9,8 @@
 Pod::Spec.new do |s|
 
   s.name         = "STINetwork"
-  s.version      = "0.0.1"
-  s.summary      = "A short description of STINetwork."
+  s.version      = "0.0.2"
+  s.summary      = "1.自动生成model代码，并且非常简洁\n2.自动生成api接口调用代码，你要做的只是填充请求数据 \n3.请求的数据，自动反序列化成相对应的mode实例"
 
   s.description  = "STINetwork"
 
@@ -21,12 +21,12 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/i-phil/STINetwork.git", :tag => "0.0.1" }
 
-  s.source_files  = "STINetwork", "STINetwork/**/*.{h,m}"
+  s.source_files  = "STINetwork/*.{h,m}", "STINetwork/http/{STIHTTPNetwork, vendor/AutoCoding}/*.{h,m}"
 
   s.ios.deployment_target = "8.0"
   s.osx.deployment_target = "10.9"
 
   s.framework  = "Foundation"
   s.requires_arc = true
-
+  s.dependency 'AFNetworking'
 end
