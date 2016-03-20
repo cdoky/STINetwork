@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "STINetwork"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "1.自动生成model代码，并且非常简洁\n2.自动生成api接口调用代码，你要做的只是填充请求数据 \n3.请求的数据，自动反序列化成相对应的mode实例"
 
   s.description  = "STINetwork"
@@ -21,8 +21,8 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/i-phil/STINetwork.git", :tag => "0.0.3" }
 
-  s.public_header_files = "STINetwork/*.h"
-  s.source_files  = "STINetwork/*.{h,m}"
+  s.public_header_files = "STINetwork/STINetworkHeader.h"
+  s.source_files  = "STINetwork/STINetworkHeader.{h,m}"
 
   s.ios.deployment_target = "8.0"
   s.osx.deployment_target = "10.9"
