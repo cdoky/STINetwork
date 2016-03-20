@@ -33,3 +33,4 @@
 最后感谢qfish大神的支持，后续我会跟qfish大神联系，把最新的代码生成工具放出来
 
 <a href="https://github.com/qfish">@QFish</a>
+有问题可以通过邮件联系我:goo.gle@foxmail.com
