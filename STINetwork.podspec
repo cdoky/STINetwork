@@ -19,9 +19,9 @@ Pod::Spec.new do |s|
 
   s.author             = { "philZhang" => "goo.gle@foxmail.com" }
 
-  s.source       = { :git => "https://github.com/i-phil/STINetwork.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/i-phil/STINetwork.git", :tag => "0.0.2" }
 
-  s.source_files  = "STINetwork/*.{h,m}", "STINetwork/http/{STIHTTPNetwork, vendor/AutoCoding}/*.{h,m}"
+  s.source_files  = "STINetwork", "STINetwork/*.{h,m}", "STINetwork/http/STIHTTPNetwork/**/*.{h,m}", "STINetwork/http/vendor/AutoCoding/**/*.{h,m}"
 
   s.ios.deployment_target = "8.0"
   s.osx.deployment_target = "10.9"
