@@ -35,3 +35,6 @@
 <a href="https://github.com/qfish">@QFish</a>
 
 有问题可以通过邮件联系我:goo.gle@foxmail.com
+
+#use CocoaPods
+    pod 'STINetwork'
