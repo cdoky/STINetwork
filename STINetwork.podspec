@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "STINetwork"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "1.自动生成model代码，并且非常简洁\n2.自动生成api接口调用代码，你要做的只是填充请求数据 \n3.请求的数据，自动反序列化成相对应的mode实例"
 
   s.description  = "STINetwork"
