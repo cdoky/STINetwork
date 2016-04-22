@@ -37,7 +37,7 @@
 
 #undef	singleton
 #define singleton( __class ) \
-		property (nonatomic, readonly) __class * sharedInstance; \
+		property (nonnull, nonatomic, readonly) __class * sharedInstance; \
 		- (__class *)sharedInstance; \
 		+ (__class *)sharedInstance;
 

@@ -122,6 +122,8 @@ NSString * STIHTTPRequestMethodString(STIHTTPRequestMethod method)
             }
         } else {
             if (success) {
+//                NSData *jsonData = [NSJSONSerialization dataWithJSONObject:responseObject[0] options:NSJSONWritingPrettyPrinted error:nil];
+//                NSString *str = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
                 success(dataTask, responseObject);
             }
         }
