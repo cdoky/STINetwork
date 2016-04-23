@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 
   s.author             = { "philZhang" => "goo.gle@foxmail.com" }
 
-  s.source       = { :git => "https://github.com/i-phil/STINetwork.git", :tag => "0.0.6" }
+  s.source       = { :git => "https://github.com/i-phil/STINetwork.git", :tag => "0.0.3" }
 
   s.public_header_files = "STINetwork/STINetworkHeader.h"
   s.source_files  = "STINetwork/STINetworkHeader.{h,m}"
