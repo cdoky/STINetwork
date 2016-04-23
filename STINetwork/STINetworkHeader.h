@@ -5,10 +5,12 @@
 
 #if __has_include(<STINetwork/STINetworkHeader.h>)
 #import <STINetwork/Samurai_Singleton.h>
+#import <STINetwork/STIHTTPNetwork.h>
 #import <STINetwork/NSObject+AutoCoding.h>
 #else
 #import "Samurai_Singleton.h"
 #import "NSObject+AutoCoding.h"
+#import "STIHTTPNetwork.h"
 #endif
 
 #endif

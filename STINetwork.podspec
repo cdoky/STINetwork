@@ -54,7 +54,6 @@ EOS
   	ss.dependency 'STINetwork/Singleton'
   	ss.source_files = "STINetwork/http/STIHTTPNetwork/**/*.{h,m}"
     ss.public_header_files = "STINetwork/http/STIHTTPNetwork/**/*.h"
-    ss.dependency 'AFNetworking'
   end
 
   
