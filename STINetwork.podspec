@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 
   s.author             = { "philZhang" => "goo.gle@foxmail.com" }
 
-  s.source       = { :git => "https://github.com/i-phil/STINetwork.git", :tag => "0.0.7", :submodules => true}
+  s.source       = { :git => "https://github.com/i-phil/STINetwork.git", :tag => "{s.version.to_s}", :submodules => true}
 
   s.framework  = "Foundation"
   s.requires_arc = true
