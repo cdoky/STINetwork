@@ -19,10 +19,11 @@ Pod::Spec.new do |s|
 
   s.author             = { "philZhang" => "goo.gle@foxmail.com" }
 
-  s.source       = { :git => "https://github.com/i-phil/STINetwork.git", :tag => "0.0.7" }
+  s.source       = { :git => "https://github.com/i-phil/STINetwork.git", :tag => "0.0.7", :submodules => true}
 
   s.framework  = "Foundation"
   s.requires_arc = true
+  s.source_files = 'AFNetworking/*.{h,m}'
   s.dependency 'AFNetworking'
 
   s.public_header_files = "STINetwork/STINetworkHeader.h"
@@ -53,6 +54,7 @@ EOS
   	ss.dependency 'STINetwork/Singleton'
   	ss.source_files = "STINetwork/http/STIHTTPNetwork/**/*.{h,m}"
     ss.public_header_files = "STINetwork/http/STIHTTPNetwork/**/*.h"
+    ss.dependency 'AFNetworking'
   end
 
   

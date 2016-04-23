@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4A54DF721BFA34C10012AE51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A54DF711BFA34C10012AE51 /* main.m */; };
+		4A54DF751BFA34C10012AE51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A54DF741BFA34C10012AE51 /* AppDelegate.m */; };
+		4A54DF781BFA34C10012AE51 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A54DF771BFA34C10012AE51 /* ViewController.m */; };
+		4A54DF7B1BFA34C10012AE51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A54DF791BFA34C10012AE51 /* Main.storyboard */; };
+		4A54DF7D1BFA34C10012AE51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A54DF7C1BFA34C10012AE51 /* Assets.xcassets */; };
+		4A54DF801BFA34C10012AE51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A54DF7E1BFA34C10012AE51 /* LaunchScreen.storyboard */; };
+		4A784B031CCBC4730038EAD8 /* STIHTTPNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A784ACF1CCBC4730038EAD8 /* STIHTTPNetwork.m */; };
+		4A784B041CCBC4730038EAD8 /* STIHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A784AD11CCBC4730038EAD8 /* STIHTTPSessionManager.m */; };
+		4A784B0E1CCBC4730038EAD8 /* AutoCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A784AE91CCBC4730038EAD8 /* AutoCoding.m */; };
+		4A784B0F1CCBC4730038EAD8 /* NSObject+AutoCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A784AEB1CCBC4730038EAD8 /* NSObject+AutoCoding.m */; };
+		4A784B101CCBC4730038EAD8 /* NSObject+AutoRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A784AED1CCBC4730038EAD8 /* NSObject+AutoRuntime.m */; };
+		4A784B191CCBC4730038EAD8 /* Samurai_Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A784B011CCBC4730038EAD8 /* Samurai_Singleton.m */; };
+		4A87DE1B1BFA389600820008 /* Dribbble.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A87DE181BFA389600820008 /* Dribbble.m */; };
+		4A87DE1C1BFA389600820008 /* DribbbleClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A87DE1A1BFA389600820008 /* DribbbleClient.m */; };
+		4AF5A2D41CACCC0000B3F3F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF5A2D31CACCC0000B3F3F5 /* ViewController.swift */; };
+		A01D00024BF797F0169F4D3C /* libPods-STINetworkDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F4AF3B10D0A1FA48535F60 /* libPods-STINetworkDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		492F2AE2F4FC3BEE7CA03666 /* Pods-STINetworkDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STINetworkDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-STINetworkDemo/Pods-STINetworkDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		4A54DF6D1BFA34C10012AE51 /* STINetworkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STINetworkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A54DF711BFA34C10012AE51 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4A54DF731BFA34C10012AE51 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4A54DF741BFA34C10012AE51 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4A54DF761BFA34C10012AE51 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4A54DF771BFA34C10012AE51 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4A54DF7A1BFA34C10012AE51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4A54DF7C1BFA34C10012AE51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4A54DF7F1BFA34C10012AE51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4A54DF811BFA34C10012AE51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A784ACE1CCBC4730038EAD8 /* STIHTTPNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STIHTTPNetwork.h; sourceTree = "<group>"; };
+		4A784ACF1CCBC4730038EAD8 /* STIHTTPNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STIHTTPNetwork.m; sourceTree = "<group>"; };
+		4A784AD01CCBC4730038EAD8 /* STIHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STIHTTPSessionManager.h; sourceTree = "<group>"; };
+		4A784AD11CCBC4730038EAD8 /* STIHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STIHTTPSessionManager.m; sourceTree = "<group>"; };
+		4A784AE81CCBC4730038EAD8 /* AutoCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoCoding.h; sourceTree = "<group>"; };
+		4A784AE91CCBC4730038EAD8 /* AutoCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoCoding.m; sourceTree = "<group>"; };
+		4A784AEA1CCBC4730038EAD8 /* NSObject+AutoCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AutoCoding.h"; sourceTree = "<group>"; };
+		4A784AEB1CCBC4730038EAD8 /* NSObject+AutoCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AutoCoding.m"; sourceTree = "<group>"; };
+		4A784AEC1CCBC4730038EAD8 /* NSObject+AutoRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AutoRuntime.h"; sourceTree = "<group>"; };
+		4A784AED1CCBC4730038EAD8 /* NSObject+AutoRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AutoRuntime.m"; sourceTree = "<group>"; };
+		4A784B001CCBC4730038EAD8 /* Samurai_Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Samurai_Singleton.h; sourceTree = "<group>"; };
+		4A784B011CCBC4730038EAD8 /* Samurai_Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Samurai_Singleton.m; sourceTree = "<group>"; };
+		4A784B021CCBC4730038EAD8 /* STINetworkHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STINetworkHeader.h; sourceTree = "<group>"; };
+		4A87DE171BFA389600820008 /* Dribbble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dribbble.h; sourceTree = "<group>"; };
+		4A87DE181BFA389600820008 /* Dribbble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dribbble.m; sourceTree = "<group>"; };
+		4A87DE191BFA389600820008 /* DribbbleClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DribbbleClient.h; sourceTree = "<group>"; };
+		4A87DE1A1BFA389600820008 /* DribbbleClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DribbbleClient.m; sourceTree = "<group>"; };
+		4AF5A2D21CACCBFF00B3F3F5 /* STINetworkDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "STINetworkDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		4AF5A2D31CACCC0000B3F3F5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C1F4AF3B10D0A1FA48535F60 /* libPods-STINetworkDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-STINetworkDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF064395A7A91F3D51D27288 /* Pods-STINetworkDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STINetworkDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-STINetworkDemo/Pods-STINetworkDemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4A54DF6A1BFA34C10012AE51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A01D00024BF797F0169F4D3C /* libPods-STINetworkDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4A54DF641BFA34C10012AE51 = {
+			isa = PBXGroup;
+			children = (
+				4A784ACB1CCBC4730038EAD8 /* STINetwork */,
+				4A87DE161BFA389600820008 /* DemoProtocol */,
+				4A54DF6F1BFA34C10012AE51 /* STINetworkDemo */,
+				4A54DF6E1BFA34C10012AE51 /* Products */,
+				6B707FD5DD56FACBDAC79288 /* Pods */,
+				CE887B69920C161293977026 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4A54DF6E1BFA34C10012AE51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A54DF6D1BFA34C10012AE51 /* STINetworkDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4A54DF6F1BFA34C10012AE51 /* STINetworkDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4A54DF731BFA34C10012AE51 /* AppDelegate.h */,
+				4A54DF741BFA34C10012AE51 /* AppDelegate.m */,
+				4A54DF761BFA34C10012AE51 /* ViewController.h */,
+				4A54DF771BFA34C10012AE51 /* ViewController.m */,
+				4A54DF791BFA34C10012AE51 /* Main.storyboard */,
+				4A54DF7C1BFA34C10012AE51 /* Assets.xcassets */,
+				4A54DF7E1BFA34C10012AE51 /* LaunchScreen.storyboard */,
+				4A54DF811BFA34C10012AE51 /* Info.plist */,
+				4A54DF701BFA34C10012AE51 /* Supporting Files */,
+				4AF5A2D31CACCC0000B3F3F5 /* ViewController.swift */,
+				4AF5A2D21CACCBFF00B3F3F5 /* STINetworkDemo-Bridging-Header.h */,
+			);
+			path = STINetworkDemo;
+			sourceTree = "<group>";
+		};
+		4A54DF701BFA34C10012AE51 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4A54DF711BFA34C10012AE51 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4A784ACB1CCBC4730038EAD8 /* STINetwork */ = {
+			isa = PBXGroup;
+			children = (
+				4A784ACC1CCBC4730038EAD8 /* http */,
+				4A784B001CCBC4730038EAD8 /* Samurai_Singleton.h */,
+				4A784B011CCBC4730038EAD8 /* Samurai_Singleton.m */,
+				4A784B021CCBC4730038EAD8 /* STINetworkHeader.h */,
+			);
+			path = STINetwork;
+			sourceTree = "<group>";
+		};
+		4A784ACC1CCBC4730038EAD8 /* http */ = {
+			isa = PBXGroup;
+			children = (
+				4A784ACD1CCBC4730038EAD8 /* STIHTTPNetwork */,
+				4A784AD21CCBC4730038EAD8 /* vendor */,
+			);
+			path = http;
+			sourceTree = "<group>";
+		};
+		4A784ACD1CCBC4730038EAD8 /* STIHTTPNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				4A784ACE1CCBC4730038EAD8 /* STIHTTPNetwork.h */,
+				4A784ACF1CCBC4730038EAD8 /* STIHTTPNetwork.m */,
+				4A784AD01CCBC4730038EAD8 /* STIHTTPSessionManager.h */,
+				4A784AD11CCBC4730038EAD8 /* STIHTTPSessionManager.m */,
+			);
+			path = STIHTTPNetwork;
+			sourceTree = "<group>";
+		};
+		4A784AD21CCBC4730038EAD8 /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				4A784AE71CCBC4730038EAD8 /* AutoCoding */,
+			);
+			path = vendor;
+			sourceTree = "<group>";
+		};
+		4A784AE71CCBC4730038EAD8 /* AutoCoding */ = {
+			isa = PBXGroup;
+			children = (
+				4A784AE81CCBC4730038EAD8 /* AutoCoding.h */,
+				4A784AE91CCBC4730038EAD8 /* AutoCoding.m */,
+				4A784AEA1CCBC4730038EAD8 /* NSObject+AutoCoding.h */,
+				4A784AEB1CCBC4730038EAD8 /* NSObject+AutoCoding.m */,
+				4A784AEC1CCBC4730038EAD8 /* NSObject+AutoRuntime.h */,
+				4A784AED1CCBC4730038EAD8 /* NSObject+AutoRuntime.m */,
+			);
+			path = AutoCoding;
+			sourceTree = "<group>";
+		};
+		4A87DE161BFA389600820008 /* DemoProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				4A87DE171BFA389600820008 /* Dribbble.h */,
+				4A87DE181BFA389600820008 /* Dribbble.m */,
+				4A87DE191BFA389600820008 /* DribbbleClient.h */,
+				4A87DE1A1BFA389600820008 /* DribbbleClient.m */,
+			);
+			path = DemoProtocol;
+			sourceTree = "<group>";
+		};
+		6B707FD5DD56FACBDAC79288 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				492F2AE2F4FC3BEE7CA03666 /* Pods-STINetworkDemo.debug.xcconfig */,
+				EF064395A7A91F3D51D27288 /* Pods-STINetworkDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CE887B69920C161293977026 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1F4AF3B10D0A1FA48535F60 /* libPods-STINetworkDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4A54DF6C1BFA34C10012AE51 /* STINetworkDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A54DF841BFA34C10012AE51 /* Build configuration list for PBXNativeTarget "STINetworkDemo" */;
+			buildPhases = (
+				4CC8BCCBAA7AB84C58C308B2 /* 📦 Check Pods Manifest.lock */,
+				4A54DF691BFA34C10012AE51 /* Sources */,
+				4A54DF6A1BFA34C10012AE51 /* Frameworks */,
+				4A54DF6B1BFA34C10012AE51 /* Resources */,
+				A959B0B4425D8D94A6E5AD45 /* 📦 Embed Pods Frameworks */,
+				60E46A551D284B6BA75ECC35 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = STINetworkDemo;
+			productName = STINetworkDemo;
+			productReference = 4A54DF6D1BFA34C10012AE51 /* STINetworkDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4A54DF651BFA34C10012AE51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "phil Zhang";
+				TargetAttributes = {
+					4A54DF6C1BFA34C10012AE51 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 4A54DF681BFA34C10012AE51 /* Build configuration list for PBXProject "STINetworkDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4A54DF641BFA34C10012AE51;
+			productRefGroup = 4A54DF6E1BFA34C10012AE51 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4A54DF6C1BFA34C10012AE51 /* STINetworkDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4A54DF6B1BFA34C10012AE51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A54DF801BFA34C10012AE51 /* LaunchScreen.storyboard in Resources */,
+				4A54DF7D1BFA34C10012AE51 /* Assets.xcassets in Resources */,
+				4A54DF7B1BFA34C10012AE51 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4CC8BCCBAA7AB84C58C308B2 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		60E46A551D284B6BA75ECC35 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-STINetworkDemo/Pods-STINetworkDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A959B0B4425D8D94A6E5AD45 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-STINetworkDemo/Pods-STINetworkDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4A54DF691BFA34C10012AE51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A784B191CCBC4730038EAD8 /* Samurai_Singleton.m in Sources */,
+				4A54DF781BFA34C10012AE51 /* ViewController.m in Sources */,
+				4A784B101CCBC4730038EAD8 /* NSObject+AutoRuntime.m in Sources */,
+				4A784B041CCBC4730038EAD8 /* STIHTTPSessionManager.m in Sources */,
+				4A784B031CCBC4730038EAD8 /* STIHTTPNetwork.m in Sources */,
+				4A87DE1C1BFA389600820008 /* DribbbleClient.m in Sources */,
+				4A54DF751BFA34C10012AE51 /* AppDelegate.m in Sources */,
+				4A784B0F1CCBC4730038EAD8 /* NSObject+AutoCoding.m in Sources */,
+				4A54DF721BFA34C10012AE51 /* main.m in Sources */,
+				4AF5A2D41CACCC0000B3F3F5 /* ViewController.swift in Sources */,
+				4A784B0E1CCBC4730038EAD8 /* AutoCoding.m in Sources */,
+				4A87DE1B1BFA389600820008 /* Dribbble.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4A54DF791BFA34C10012AE51 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A54DF7A1BFA34C10012AE51 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4A54DF7E1BFA34C10012AE51 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A54DF7F1BFA34C10012AE51 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4A54DF821BFA34C10012AE51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4A54DF831BFA34C10012AE51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4A54DF851BFA34C10012AE51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 492F2AE2F4FC3BEE7CA03666 /* Pods-STINetworkDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = STINetworkDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.phil.STINetworkDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "STINetworkDemo/STINetworkDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4A54DF861BFA34C10012AE51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF064395A7A91F3D51D27288 /* Pods-STINetworkDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = STINetworkDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.phil.STINetworkDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "STINetworkDemo/STINetworkDemo-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4A54DF681BFA34C10012AE51 /* Build configuration list for PBXProject "STINetworkDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A54DF821BFA34C10012AE51 /* Debug */,
+				4A54DF831BFA34C10012AE51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A54DF841BFA34C10012AE51 /* Build configuration list for PBXNativeTarget "STINetworkDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A54DF851BFA34C10012AE51 /* Debug */,
+				4A54DF861BFA34C10012AE51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4A54DF651BFA34C10012AE51 /* Project object */;
+}
