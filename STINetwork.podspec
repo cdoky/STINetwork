@@ -19,7 +19,11 @@ Pod::Spec.new do |s|
 
   s.author             = { "philZhang" => "goo.gle@foxmail.com" }
 
-  s.source       = { :git => "https://github.com/i-phil/STINetwork.git", :tag => "0.0.3" }
+  s.source       = { :git => "https://github.com/i-phil/STINetwork.git", :tag => "0.0.7" }
+
+  s.framework  = "Foundation"
+  s.requires_arc = true
+  s.dependency 'AFNetworking'
 
   s.public_header_files = "STINetwork/STINetworkHeader.h"
   s.source_files  = "STINetwork/STINetworkHeader.{h,m}"
@@ -33,10 +37,6 @@ Pod::Spec.new do |s|
 EOS
 
   s.prefix_header_contents = pch_STINetwork
-
-  s.framework  = "Foundation"
-  s.requires_arc = true
-  s.dependency 'AFNetworking'
 
   s.subspec 'Singleton' do |ss|
 	ss.public_header_files = "STINetwork/Samurai_Singleton.h"
