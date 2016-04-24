@@ -54,7 +54,6 @@
 		4A87DE181BFA389600820008 /* Dribbble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dribbble.m; sourceTree = "<group>"; };
 		4A87DE191BFA389600820008 /* DribbbleClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DribbbleClient.h; sourceTree = "<group>"; };
 		4A87DE1A1BFA389600820008 /* DribbbleClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DribbbleClient.m; sourceTree = "<group>"; };
-		4AF5A2D21CACCBFF00B3F3F5 /* STINetworkDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "STINetworkDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		4AF5A2D31CACCC0000B3F3F5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C1F4AF3B10D0A1FA48535F60 /* libPods-STINetworkDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-STINetworkDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF064395A7A91F3D51D27288 /* Pods-STINetworkDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STINetworkDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-STINetworkDemo/Pods-STINetworkDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -105,7 +104,6 @@
 				4A54DF811BFA34C10012AE51 /* Info.plist */,
 				4A54DF701BFA34C10012AE51 /* Supporting Files */,
 				4AF5A2D31CACCC0000B3F3F5 /* ViewController.swift */,
-				4AF5A2D21CACCBFF00B3F3F5 /* STINetworkDemo-Bridging-Header.h */,
 			);
 			path = STINetworkDemo;
 			sourceTree = "<group>";
@@ -448,7 +446,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.phil.STINetworkDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "STINetworkDemo/STINetworkDemo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -464,7 +462,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.phil.STINetworkDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "STINetworkDemo/STINetworkDemo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
