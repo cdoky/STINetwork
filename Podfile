@@ -9,6 +9,6 @@ target 'STINetworkDemo' do
     #    use_frameworks!
     #    pod 'R.swift'
     pod 'Realm'
-    pod 'BrynKit'
+    #    pod 'BrynKit'
 end
 

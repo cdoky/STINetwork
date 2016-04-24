@@ -1,7 +1,6 @@
-CLANG_ENABLE_MODULES = YES
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/BrynKit" "${PODS_ROOT}/Headers/Public/Realm" "${PODS_ROOT}/Headers/Public/libextobjc"
-LIBRARY_SEARCH_PATHS = $(inherited) "$CONFIGURATION_BUILD_DIR/AFNetworking" "$CONFIGURATION_BUILD_DIR/BrynKit" "$CONFIGURATION_BUILD_DIR/Realm" "$CONFIGURATION_BUILD_DIR/libextobjc" $(inherited) "${PODS_ROOT}/Realm/core"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/BrynKit" -isystem "${PODS_ROOT}/Headers/Public/Realm" -isystem "${PODS_ROOT}/Headers/Public/libextobjc"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"AFNetworking" -l"BrynKit" -l"Realm" -l"c++" -l"libextobjc" -l"realm-ios" -framework "CoreGraphics" -framework "CoreVideo" -framework "MobileCoreServices" -framework "Security" -framework "SystemConfiguration"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/Realm"
+LIBRARY_SEARCH_PATHS = $(inherited) "$CONFIGURATION_BUILD_DIR/AFNetworking" "$CONFIGURATION_BUILD_DIR/Realm" $(inherited) "${PODS_ROOT}/Realm/core"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/Realm"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"AFNetworking" -l"Realm" -l"c++" -l"realm-ios" -framework "CoreGraphics" -framework "MobileCoreServices" -framework "Security" -framework "SystemConfiguration"
 PODS_ROOT = ${SRCROOT}/Pods
