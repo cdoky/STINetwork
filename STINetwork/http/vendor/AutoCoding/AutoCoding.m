@@ -245,49 +245,52 @@ static NSString *const AutocodingException = @"AutocodingException";
 
 - (NSDictionary *)dictionaryRepresentation
 {
-	if ( [self isKindOfClass:NSDictionary.class] )
-		return (NSDictionary *)self;
-	
-	if ( [self isKindOfClass:NSData.class] )
-		return nil;
-
-	// TODO: foundation object
-//	if ( [self isKindOfClass:NSDate.class] )
-//		return [self description];
-	
+    if ( [self isKindOfClass:NSDictionary.class] )
+        return (NSDictionary *)self;
+    
+    if ( [self isKindOfClass:NSData.class] )
+        return nil;
+    
+    // TODO: foundation object
+    //	if ( [self isKindOfClass:NSDate.class] )
+    //		return [self description];
+    
     NSDictionary * codableProperties = [self codableProperties];
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     for (__unsafe_unretained NSString *key in codableProperties)
     {
         id value = [self valueForKey:key];
-
+        
         if (value) {
             Class clz = codableProperties[key][@"class"];
             if ( [clz isSubclassOfClass:NSValue.class]
-                 || [clz isSubclassOfClass:NSString.class]
+                || [clz isSubclassOfClass:NSString.class]
                 || [clz isSubclassOfClass:NSDictionary.class]
                 )
             {
                 if (value) dict[key] = value;
             }
-			else if ( [clz isSubclassOfClass:NSArray.class] )
-			{
-				NSMutableArray * values = [NSMutableArray array];
-				[(NSArray *)value enumerateObjectsUsingBlock:^(NSObject * obj, NSUInteger idx, BOOL *stop) {
-					if ( [obj.class isSubclassOfClass:NSValue.class]
-						|| [obj.class isSubclassOfClass:NSString.class]
-						|| [obj.class isSubclassOfClass:NSDictionary.class]
-						)
-					{
-						[values addObject:obj];
-					}
-					else
-					{
-						[values addObject:[obj dictionaryRepresentation]];
-					}
-				}];
-				if (value) dict[key] = [NSArray arrayWithArray:values];
-			}
+            else if ([clz conformsToProtocol:@protocol(NSFastEnumeration)])
+            {
+                NSMutableArray * values = [NSMutableArray array];
+                NSInteger itemCount = ((NSArray *)value).count;
+                for (int i = 0; i < itemCount; i ++) {
+                    NSObject *obj = [value objectAtIndex:i];
+                    if ( [obj.class isSubclassOfClass:NSValue.class]
+                        || [obj.class isSubclassOfClass:NSString.class]
+                        || [obj.class isSubclassOfClass:NSDictionary.class]
+                        )
+                    {
+                        [values addObject:obj];
+                    }
+                    else
+                    {
+                        [values addObject:[obj dictionaryRepresentation]];
+                    }
+                    
+                }
+                if (value) dict[key] = [NSArray arrayWithArray:values];
+            }
             else
             {
                 if (value) dict[key] = [value dictionaryRepresentation];
