@@ -1,14 +1,13 @@
 # Uncomment this line to define a global platform for your project
-platform :ios, '8.0'
+# platform :ios, '8.0'
 # Uncomment this line if you're using Swift
-# use_frameworks!
 
-pod 'AFNetworking'
+use_frameworks!
 
 target 'STINetworkDemo' do
-    #    use_frameworks!
-    #    pod 'R.swift'
-   # pod 'Realm'
-    #    pod 'BrynKit'
+    pod 'AFNetworking'
+    #https://github.com/realm/realm-cocoa
+    pod 'Realm', '~> 0.100.0'
+    pod 'ReactiveCocoa', '~> 2.5'
 end
 
